@@ -1,19 +1,25 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: "AudioC0re",
+    description: "Page about AudioC0re.",
   },
   plugins: [
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "Mu0ZCOErnBipsJrJ7R0m-omD4eLhQLgssUEd0YHdWp8",
-        spaceId: "b2pe2ibo0x1h",
+        accessToken: process.env.GATSBY_ACCESS_TOKEN,
+        spaceId: process.env.GATSBY_SPACE_ID,
       },
     },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-sass",
+    
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -23,4 +29,6 @@ module.exports = {
       __key: "images",
     },
   ],
+  
 };
+
