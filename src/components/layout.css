@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(239, 225, 206)
+  }
+  
+.city ul {
+    list-style-type: none;
+}
+
+.city li a {
+    font-size: larger;
+    text-decoration: none;
+    
+  }
+
+  .city li a:hover {
+    text-decoration: underline;
+  }

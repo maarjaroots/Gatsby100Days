@@ -1,32 +1,25 @@
-import * as React from "react"
-import { graphql } from 'gatsby'
-import Layout from "../components/layout"
-import Home from "../pages/home"
-
-
-
+import * as React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
 
 // markup
-const IndexPage = ( {data}) => {
+const IndexPage = ({ data }) => {
   return (
-
     <Layout>
-      <Home />
+      <h1>{data.contentfulHomepage.title}</h1>
+
+      <h2>{data.contentfulHomepage.body}</h2>
     </Layout>
-    // <div>Hello!
-    // {data.site.siteMetadata.description}
-    // </div>
-  )
-}
+  );
+};
 
-// export const query = graphql`
-//   query HomePageQuery {
-//     site {
-//       siteMetadata {
-//         description
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  {
+    contentfulHomepage {
+      body
+      title
+    }
+  }
+`;
 
-export default IndexPage
+export default IndexPage;
