@@ -5,6 +5,7 @@ module.exports = {
   siteMetadata: {
     title: "AudioC0re",
     description: "Page about AudioC0re.",
+    siteUrl: `https://audio.webcontext.uk`,
   },
   plugins: [
     {
