@@ -1,0 +1,9 @@
+.location li {
+    list-style-type: none;
+}
+
+.location li a {
+    font-size: larger;
+    text-decoration: none;
+
+}
