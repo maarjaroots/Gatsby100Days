@@ -6,17 +6,17 @@ import Layout from "../components/layout";
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <h1>{data.contentfulHomepage.title}</h1>
+      <h1>{data.contentfulHome.name}</h1>
 
-      <h2>{data.contentfulHomepage.body}</h2>
+      <h2>{data.contentfulHome.title}</h2>
     </Layout>
   );
 };
 
 export const query = graphql`
   {
-    contentfulHomepage {
-      body
+    contentfulHome {
+      name
       title
     }
   }

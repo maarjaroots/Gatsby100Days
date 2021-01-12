@@ -7,8 +7,8 @@ export default function location(props) {
     <Layout>
       <h1>Page of:</h1>
 
-      <h2> {props.data.contentfulLocation.title} </h2>
-      <h3> {props.data.contentfulLocation.body} </h3>
+      <h2> {props.data.contentfulLocation.name} </h2>
+      <h3> {props.data.contentfulLocation.title} </h3>
     </Layout>
   );
 }
@@ -17,8 +17,8 @@ export const query = graphql`
   query($id: String) {
     contentfulLocation(id: { eq: $id }) {
       id
+      name
       title
-      body
     }
   }
 `;

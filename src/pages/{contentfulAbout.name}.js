@@ -5,9 +5,9 @@ import { graphql, Link } from "gatsby";
 export default function about(props) {
   return (
     <Layout>
-      <h1>{props.data.contentfulAbout.title}</h1>
+      <h1>{props.data.contentfulAbout.name}</h1>
 
-      <h2>{props.data.contentfulAbout.body}</h2>
+      <h2>{props.data.contentfulAbout.title}</h2>
       
       <h3>More info of our current locations:</h3>
 
@@ -15,7 +15,7 @@ export default function about(props) {
         <ul>
           {props.data.allContentfulLocation.edges.map(({ node }) => (
             <li key={node.id}>
-              <Link to={node.path}>{node.title}</Link>
+              <Link to={node.path}>{node.name}</Link>
             </li>
           ))}
         </ul>
@@ -27,15 +27,15 @@ export default function about(props) {
 export const query = graphql`
   {
     contentfulAbout {
-      body
+      name
       title
     }
     allContentfulLocation {
       edges {
         node {
           id
-          title
-          path: gatsbyPath(filePath: "/{contentfulLocation.title}")
+          name
+          path: gatsbyPath(filePath: "/{contentfulLocation.name}")
         }
       }
     }
