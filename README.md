@@ -4,8 +4,5 @@
   </a>
 </p>
 
-
-    I'm taking part of [#100DaysOfGatsby](https://www.gatsbyjs.com/blog/100days-challenge-1/).
-    You can find my Completed Challenge 1 [here](https://audio.webcontext.uk/)
-
-   
+I'm taking part of <a href="https://www.gatsbyjs.com/blog/100days-challenge-1/">(#100DaysOfGatsby)</a><br/>
+You can find my Completed Challenge number 1<a href="https://audio.webcontext.uk/">here</a>
