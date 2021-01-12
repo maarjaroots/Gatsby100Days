@@ -8,7 +8,7 @@ export default function about(props) {
       <h1>{props.data.contentfulAbout.name}</h1>
 
       <h2>{props.data.contentfulAbout.title}</h2>
-      
+
       <h3>More info of our current locations:</h3>
 
       <div className="city">
